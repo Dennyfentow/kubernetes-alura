@@ -9,8 +9,13 @@ spec:
       volumeMounts:
         - mountPath: /volume-dentro-do-container
           name: segundo-volume
-    - name: jenkins-container
-      image: jenkins/jenkins:jdk11
+    - name: db-noticias-container-2
+      image: aluracursos/mysql-db:1
+      ports:
+        - containerPort: 3306
+      envFrom:
+        - configMapRef:
+            name: db-configmap
       volumeMounts:
         - mountPath: /volume-dentro-do-container
           name: segundo-volume
