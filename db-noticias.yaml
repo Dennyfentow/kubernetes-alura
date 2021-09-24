@@ -10,3 +10,13 @@ spec:
       image: aluracursos/mysql-db:1
       ports:
         - containerPort: 3306
+      envFrom:
+        - configMapRef:
+            name: db-configmap
+      # Importando de uma a uma
+      # env:
+        # - name: MYSQL_ROOT_PASSWORD
+        #   valueFrom:
+        #     configMapKeyRef:
+        #       name: db-configmap
+        #       key: MYSQL_ROOT_PASSWORD
