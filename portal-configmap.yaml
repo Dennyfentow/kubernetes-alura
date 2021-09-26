@@ -3,4 +3,5 @@ kind: ConfigMap
 metadata:
   name: portal-configmap
 data:
-  IP_SISTEMA: http://192.168.99.100:30001
+  # IP_SISTEMA: http://192.168.99.100:30001
+  IP_SISTEMA: http://192.168.99.106:30001 # PC Casa
